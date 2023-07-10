@@ -1,0 +1,19 @@
+Lessons:
+    https://www.youtube.com/playlist?list=PLAma_mKffTOR5o0WNHnY0mTjKxnCgSXrZ
+
+Lesson 2:
+    1. Create Maven project with webapp archetype
+    2. Install dependencies to pom.xml:
+        - Spring core
+        - Spring beans
+        - Spring context
+    3. New directory 'src/main/resources'. Mark it as 'Resources Root'
+    4. New directory 'src/main/java'. Mark it as 'Sources Root'
+    5. New Package 'src/main/java/by.springcourse' (As GroupID)
+    6. Create class TestBean with private String field 'name', constructor, setter and getter
+    7. Create config file 'src/main/resources/applicationContext.xml' with code
+    8. Create class TestSpring with code
+    9. Run Main method -> My name to console
+
+Lesson 4:
+    1.

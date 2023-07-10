@@ -1,2 +1,2 @@
-# Spring-first-project
+# Spring first project
 Spring youtube course

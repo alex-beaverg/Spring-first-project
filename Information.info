@@ -2,7 +2,7 @@ Lessons:
     https://www.youtube.com/playlist?list=PLAma_mKffTOR5o0WNHnY0mTjKxnCgSXrZ
 
 Lesson 2:
-    1. Create Maven project with webapp archetype
+    1. Create Maven project with webapp archetype (IntelliJ IDEA Ultimate edition)
     2. Install dependencies to pom.xml:
         - Spring core
         - Spring beans
@@ -16,4 +16,16 @@ Lesson 2:
     9. Run Main method -> My name to console
 
 Lesson 4:
+    1. Delete class TestBean
+    2. Create interface Music
+    3. Create class ClassicalMusic implements Music
+    4. Create class RockMusic implements Music
+    5. Create class MusicPlayer
+    6. Update 'applicationContext.xml'
+    7. Update class TestSpring
+    8. Run Main method -> Playing music to console
+    9. Do changes in 'applicationContext.xml' -> Run Main -> Playing another music to console
+    HomeWork: Add another music style - Done
+
+Lesson 5:
     1.

@@ -25,12 +25,26 @@ Lesson 4:
     7. Update class TestSpring
     8. Run Main method -> Playing music to console
     9. Do changes in 'applicationContext.xml' -> Run Main -> Playing another music to console
-    HomeWork: Add another music style - Done
+    HomeWork: Add another music style -> // Done
 
 Lesson 5:
-    1. Create new Bean musicPlayerBean in 'applicationContext.xml'
+    1. Create new bean musicPlayerBean in 'applicationContext.xml'
     2. Update class TestSpring
     3. Run Main method -> Playing music to console
 
 Lesson 6:
+    1. Add setter to class MusicPlayer and empty constructor
+    2. Update 'applicationContext.xml'
+    3. Run Main method -> Playing music to console
+    4. Create fields 'name' and 'volume' in class MusicPlayer
+    5. Add setters and getters for these fields
+    6. Add properties to bean musicPlayerBean in 'applicationContext.xml'
+    7. Update class TestSpring
+    8. Run Main method -> Playing music to console + name and volume
+    9. Create file 'src/main/resources/musicPlayer.properties' with variables
+    10. Update 'applicationContext.xml'
+    11. Run Main method -> Playing music to console + name and volume
+    HomeWork: Make list with genres and run musicPlayer with all these genres -> // Done
+
+Lesson 7:
     1.

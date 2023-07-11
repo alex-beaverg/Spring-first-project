@@ -28,4 +28,9 @@ Lesson 4:
     HomeWork: Add another music style - Done
 
 Lesson 5:
+    1. Create new Bean musicPlayerBean in 'applicationContext.xml'
+    2. Update class TestSpring
+    3. Run Main method -> Playing music to console
+
+Lesson 6:
     1.

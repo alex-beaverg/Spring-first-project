@@ -11,4 +11,9 @@
           class="by.springcourse.MetalMusic">
     </bean>
 
+    <bean id="musicPlayerBean"
+          class="by.springcourse.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
 </beans>

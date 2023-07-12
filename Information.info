@@ -70,4 +70,28 @@ Lesson 9:
     5. Run Main method -> All songs play
 
 Lesson 10:
+    1. Add annotations @Component to class MusicPlayer
+    2. Remake class MusicPlayer with annotation @Autowired
+    3. Turn off (as a comment) old actions from TestSpring and add new actions
+    4. Run Main method -> Song plays
+    5. Return changes in class MusicPlayer with annotation @Autowired
+    6. Turn off (as a comment) annotations @Component in another classes
+    7. Run Main method -> Song plays
+    8. Return annotation @Component in another classes
+    9. Run Main method -> ERROR
+    10. Turn off (as a comment) annotations @Component in another classes
+    11. Run Main method -> Song plays
+    12. Replace annotation @Autowired to setter
+    13. Run Main method -> Song plays
+    14. Replace annotation @Autowired to field
+    15. Run Main method -> Song plays
+    16. Create new fields and add another constructor with 3 arguments and remake method playMusic
+    17. Return annotation @Component in another classes
+    18. Run Main method -> All songs play
+    19. Create class Computer with constructor and toString()
+    20. Remake method playMusic
+    21. Turn off (as a comment) old actions from TestSpring and add new actions
+    22. Run Main method -> Song plays
+
+Lesson 11:
     1.

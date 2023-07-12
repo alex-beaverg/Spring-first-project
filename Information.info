@@ -56,7 +56,7 @@ Lesson 8:
     1. Add init and destroy methods to class MetalMusic
     2. Add these methods to 'applicationContext.xml'
     3. Run Main method -> LOG messages from these methods to console
-    HomeWork: Check runs init and destroy methods on beans with prototype and singleton scope -> Done
+    HomeWork: Check runs init and destroy methods on beans with prototype and singleton scope -> // Done
     4. Add private constructor in class MetalMusic
     5. Add method to create new MetalMusic object
     6. Add this method to 'applicationContext.xml'
@@ -94,4 +94,13 @@ Lesson 10:
     22. Run Main method -> Song plays
 
 Lesson 11:
+    1. Remake class MusicPlayer with annotations @Autowired and @Qualifier in field music
+    2. Run Main method -> Song plays
+    3. Remake class MusicPlayer with annotations @Autowired and @Qualifier in constructor
+    4. Run Main method -> All songs play
+    HomeWork: Lists with songs every genres, all beans in MusicPlayer, enum with 3 genres, playMusic play random song
+        depending enum genre -> // Done
+    5. Delete all code as comments
+
+Lesson 12:
     1.

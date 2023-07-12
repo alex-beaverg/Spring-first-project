@@ -1,8 +1,10 @@
 package by.springcourse;
 
+import java.util.List;
+
 /**
  * @author Alexey Bobrykov
  */
 public interface Music {
-    String getSong();
+    List<String> getSong();
 }

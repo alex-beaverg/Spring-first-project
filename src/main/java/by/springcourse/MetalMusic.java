@@ -2,27 +2,19 @@ package by.springcourse;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author Alexey Bobrykov
  */
 @Component
 public class MetalMusic implements Music{
-    private MetalMusic() {}
-
-    public static MetalMusic getMetalMusic() {
-        return new MetalMusic();
-    }
-
-    public void doMyInit() {
-        System.out.println("[LOG-INFO]: Metal music initialisation method");
-    }
-
-    public void doMyDestroy() {
-        System.out.println("[LOG-INFO]: Metal music destruction method");
-    }
+    private List<String> songList = new ArrayList<>(Arrays.asList("Master of Puppets", "Battery", "Blackened"));
 
     @Override
-    public String getSong() {
-        return "Master of Puppets";
+    public List<String> getSong() {
+        return songList;
     }
 }

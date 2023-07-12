@@ -1,10 +1,10 @@
 package by.springcourse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Random;
 
 /**
  * @author Alexey Bobrykov
@@ -14,66 +14,25 @@ public class MusicPlayer {
     private ClassicalMusic classicalMusic;
     private RockMusic rockMusic;
     private MetalMusic metalMusic;
-    private Music music;
-    private List<Music> musicList = new ArrayList<>();
-    private String name;
-    private int volume;
-
-    public void doMyInit() {
-        System.out.println("[LOG INFO]: Music player initialisation method");
-    }
-
-    public void doMyDestroy() {
-        System.out.println("[LOG INFO]: Music player destruction method");
-    }
 
     @Autowired
-    public MusicPlayer(ClassicalMusic classicalMusic, RockMusic rockMusic, MetalMusic metalMusic) {
+    public MusicPlayer(@Qualifier("classicalMusic") ClassicalMusic classicalMusic,
+                       @Qualifier("rockMusic") RockMusic rockMusic,
+                       @Qualifier("metalMusic") MetalMusic metalMusic) {
         this.classicalMusic = classicalMusic;
         this.rockMusic = rockMusic;
         this.metalMusic = metalMusic;
     }
 
-    //    @Autowired
-    public MusicPlayer(Music music) {
-        this.music = music;
-    }
-
-    public MusicPlayer() {
-    }
-
-    //    @Autowired
-    public void setMusic(Music music) {
-        this.music = music;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public void setMusicList(List<Music> musicList) {
-        this.musicList = musicList;
-    }
-
-    public String playMusic() {
-        return "Playing: " + classicalMusic.getSong();
-    }
-
-    public void playMusicList() {
-        for (Music music : musicList) {
-            System.out.println("Playing: " + music.getSong());
+    public String playMusic(Genres genres) {
+        if (genres == Genres.METAL) {
+            return "Playing: " + metalMusic.getSong().get(new Random().nextInt(3));
+        } else if (genres == Genres.ROCK) {
+            return "Playing: " + rockMusic.getSong().get(new Random().nextInt(3));
+        } else if (genres == Genres.CLASSICAL) {
+            return "Playing: " + classicalMusic.getSong().get(new Random().nextInt(3));
+        } else {
+            return "Genre not found!";
         }
     }
 }

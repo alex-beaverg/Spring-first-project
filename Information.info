@@ -53,4 +53,14 @@ Lesson 7:
     4. Compare two objects -> not equals, because scope is prototype
 
 Lesson 8:
+    1. Add init and destroy methods to class MetalMusic
+    2. Add these methods to 'applicationContext.xml'
+    3. Run Main method -> LOG messages from these methods to console
+    HomeWork: Check runs init and destroy methods on beans with prototype and singleton scope -> Done
+    4. Add private constructor in class MetalMusic
+    5. Add method to create new MetalMusic object
+    6. Add this method to 'applicationContext.xml'
+    7. Run Main method -> All working
+
+Lesson 9:
     1.

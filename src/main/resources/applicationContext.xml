@@ -10,7 +10,10 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="musicBean"
-          class="by.springcourse.MetalMusic">
+          class="by.springcourse.MetalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getMetalMusic">
     </bean>
 
     <bean id="metalMusicBean"
@@ -25,7 +28,9 @@
 
     <bean id="musicPlayerBean"
           class="by.springcourse.MusicPlayer"
-          scope="prototype">
+          scope="prototype"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy">
         <property name="music" ref="musicBean" />
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
@@ -42,7 +47,9 @@
     </bean>
 
     <bean id="musicPlayerWithListBean"
-          class="by.springcourse.MusicPlayer">
+          class="by.springcourse.MusicPlayer"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy">
         <property name="musicList" ref="musicListBean" />
         <property name="name" value="${musicPlayerWithListBean.name}"/>
         <property name="volume" value="${musicPlayerWithListBean.volume}"/>

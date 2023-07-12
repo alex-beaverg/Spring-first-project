@@ -12,6 +12,14 @@ public class MusicPlayer {
     private String name;
     private int volume;
 
+    public void doMyInit() {
+        System.out.println("[LOG INFO]: Music player initialisation method");
+    }
+
+    public void doMyDestroy() {
+        System.out.println("[LOG INFO]: Music player destruction method");
+    }
+
     // Inversion of Control:
     public MusicPlayer(Music music) {
         this.music = music;

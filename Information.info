@@ -47,4 +47,10 @@ Lesson 6:
     HomeWork: Make list with genres and run musicPlayer with all these genres -> // Done
 
 Lesson 7:
+    1. Make secondMusicPlayer with id from musicPlayer
+    2. Compare two objects -> equals, because scope is singleton
+    3. Change scope to prototype
+    4. Compare two objects -> not equals, because scope is prototype
+
+Lesson 8:
     1.

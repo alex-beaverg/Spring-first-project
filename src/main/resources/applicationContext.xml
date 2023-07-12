@@ -43,8 +43,8 @@
     <bean id="musicPlayerWithListBean"
           class="by.springcourse.MusicPlayer">
         <property name="musicList" ref="musicListBean" />
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
+        <property name="name" value="${musicPlayerWithListBean.name}"/>
+        <property name="volume" value="${musicPlayerWithListBean.volume}"/>
     </bean>
 
 </beans>

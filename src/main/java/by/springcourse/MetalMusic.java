@@ -1,8 +1,11 @@
 package by.springcourse;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author Alexey Bobrykov
  */
+@Component
 public class MetalMusic implements Music{
     private MetalMusic() {}
 

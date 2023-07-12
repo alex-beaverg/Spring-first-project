@@ -60,7 +60,14 @@ Lesson 8:
     4. Add private constructor in class MetalMusic
     5. Add method to create new MetalMusic object
     6. Add this method to 'applicationContext.xml'
-    7. Run Main method -> All working
+    7. Run Main method -> All works
 
 Lesson 9:
+    1. Turn off (as a comment) beans from 'applicationContext.xml' and connect annotation context
+    2. Add annotations @Component to classes
+    3. Turn off (as a comment) old actions from TestSpring
+    4. Add new code in TestSpring
+    5. Run Main method -> All songs play
+
+Lesson 10:
     1.

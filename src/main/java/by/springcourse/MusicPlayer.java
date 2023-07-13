@@ -1,49 +1,44 @@
 package by.springcourse;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import java.util.List;
 import java.util.Random;
 
 /**
  * @author Alexey Bobrykov
  */
-@Component
 public class MusicPlayer {
     @Value("${musicPlayer.name}")
     private String name;
     @Value("${musicPlayer.volume}")
     private int volume;
-    private ClassicalMusic classicalMusic;
-    private RockMusic rockMusic;
-    private MetalMusic metalMusic;
+    private final List<Music> genres;
 
-    public String getName() {
-        return name;
+    public MusicPlayer(List<Music> genres) {
+        this.genres = genres;
     }
 
-    public int getVolume() {
-        return volume;
+    @PostConstruct
+    public void doMyInit() {
+        System.out.println(this.name + " with volume " + this.volume + " initialisation");
     }
 
-    @Autowired
-    public MusicPlayer(@Qualifier("classicalMusic") ClassicalMusic classicalMusic,
-                       @Qualifier("rockMusic") RockMusic rockMusic,
-                       @Qualifier("metalMusic") MetalMusic metalMusic) {
-        this.classicalMusic = classicalMusic;
-        this.rockMusic = rockMusic;
-        this.metalMusic = metalMusic;
+    @PreDestroy
+    public void doMyDestroy() {
+        System.out.println(this.name + " with volume " + this.volume + " destruction");
     }
 
     public String playMusic(Genres genres) {
+        int randSong = new Random().nextInt(3);
         if (genres == Genres.METAL) {
-            return "Playing: " + metalMusic.getSong().get(new Random().nextInt(3));
+            return this.name + " with volume " + this.volume + " plays: " + this.genres.get(0).getSong().get(randSong);
         } else if (genres == Genres.ROCK) {
-            return "Playing: " + rockMusic.getSong().get(new Random().nextInt(3));
+            return this.name + " with volume " + this.volume + " plays: " + this.genres.get(1).getSong().get(randSong);
         } else if (genres == Genres.CLASSICAL) {
-            return "Playing: " + classicalMusic.getSong().get(new Random().nextInt(3));
+            return this.name + " with volume " + this.volume + " plays: " + this.genres.get(2).getSong().get(randSong);
         } else {
             return "Genre not found!";
         }

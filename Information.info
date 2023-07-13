@@ -118,4 +118,10 @@ Lesson 12:
     13. Run Main method -> init and destroy methods work
 
 Lesson 13:
-    1.
+    1. Create class SpringConfig. Delete applicationContext.xml
+    2. Add @Configuration, @ComponentScan and @PropertySource
+    3. Change field context in TestSpring
+    4. Run Main method -> All works as before
+    5. Delete all @Component and @Autowired
+    6. Update class SpringConfig
+    HomeWork: 3 Genres, 3 songs, random play -> // Done

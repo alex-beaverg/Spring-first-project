@@ -103,4 +103,19 @@ Lesson 11:
     5. Delete all code as comments
 
 Lesson 12:
+    1. Remake class MusicPlayer with annotations @Value in fields name and volume
+    2. Turn off (as a comment) old actions from TestSpring
+    3. Add new code in TestSpring
+    4. Run Main method -> name and volume was written
+    5. Add annotation @Scope("singleton") to MetalMusic class
+    6. Create 2 beans MetalMusic and check their scopes -> 1 object
+    7. Change annotation with @Scope("prototype") in MetalMusic class
+    8. Check their scopes -> 2 objects
+    9. Delete annotation @Scope
+    10. Remake class MetalMusic with init and destroy methods and annotations
+    11. Install dependency in pom.xml -> Javax Annotation API
+    12. Change code in TestSpring
+    13. Run Main method -> init and destroy methods work
+
+Lesson 13:
     1.
